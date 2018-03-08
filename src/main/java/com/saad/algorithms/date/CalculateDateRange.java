@@ -9,6 +9,7 @@ public class CalculateDateRange {
 		String tMonth = input.toDate.substring(5, 7);
 		String tDay = null;
 		int tint = Integer.parseInt(tMonth);
+		int tyrint=Integer.parseInt(tYear);
 		switch (tint) {
 		case 1:
 		case 3:
@@ -28,11 +29,14 @@ public class CalculateDateRange {
 			break;
 		}
 		case 2: {
-			tDay="28";
+			if (((tyrint % 4 == 0) && !(tyrint % 100 == 0)) || (tyrint % 400 == 0))
+				tDay = "29";
+			else
+				tDay = "28";
 			break;
 		}
 		}
-		String tDate=tYear+"-"+tMonth+"-"+tDay;
+		String tDate = tYear + "-" + tMonth + "-" + tDay;
 		return new DateRange(fDate, tDate);
 	}
 }
