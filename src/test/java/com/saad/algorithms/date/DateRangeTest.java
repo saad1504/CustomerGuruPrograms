@@ -24,7 +24,8 @@ public class DateRangeTest {
 	@Parameters
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] {
-				{ new DateRange("2016-09-11", "2016-10-06"), new DateRange("2016-09-01", "2016-10-31") } });
+				{ new DateRange("2016-09-11", "2016-10-06"), new DateRange("2016-09-01", "2016-10-31") },
+				{ new DateRange("2016-05-16", "2016-08-06"), new DateRange("2016-05-01", "2016-08-31") }}); 
 	}
 
 	@Test
