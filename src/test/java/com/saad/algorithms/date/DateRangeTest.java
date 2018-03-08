@@ -25,12 +25,13 @@ public class DateRangeTest {
 	@Parameters
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] {
-				{ new DateRange("2016-09-11", "2016-10-06"), new DateRange("2016-09-01", "2016-10-31") },
+				{ new DateRange("2016-09-11", "2016-09-06"), new DateRange("2016-09-01", "2016-09-30") },
 				{ new DateRange("2016-05-16", "2016-08-06"), new DateRange("2016-05-01", "2016-08-31") },
 				{ new DateRange("2018-02-11", "2018-02-06"), new DateRange("2018-02-01", "2018-02-28") },
 				{ new DateRange("2016-01-25", "2016-02-16"), new DateRange("2016-01-01", "2016-02-29") },
 				{ new DateRange("2018-03-07", "2018-03-14"), new DateRange("2018-03-01", "2018-03-08") },
-				{ new DateRange("2018-02-11", "2019-02-06"), new DateRange("2018-02-01", "2018-03-08") }});
+				{ new DateRange("2018-02-11", "2019-02-06"), new DateRange("2018-02-01", "2018-03-08") },
+				{ new DateRange("2010-02-11", "2010-02-16"), new DateRange("2010-02-01", "2010-02-28") }});
 				
 	}
 	//Testing of expected output with actual output 
