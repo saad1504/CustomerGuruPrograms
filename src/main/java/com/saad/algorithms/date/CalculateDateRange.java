@@ -27,6 +27,10 @@ public class CalculateDateRange {
 			tDay = "30";
 			break;
 		}
+		case 2: {
+			tDay="28";
+			break;
+		}
 		}
 		String tDate=tYear+"-"+tMonth+"-"+tDay;
 		return new DateRange(fDate, tDate);
