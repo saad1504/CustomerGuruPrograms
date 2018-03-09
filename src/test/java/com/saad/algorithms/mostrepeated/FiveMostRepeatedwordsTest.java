@@ -7,11 +7,12 @@ import org.junit.Test;
 public class FiveMostRepeatedwordsTest {
 
 	@Test
-	public void multiplicationOfZeroIntegersShouldReturnZero() {
+	public void test() {
 		FiveMostRepeatedWords tester = new FiveMostRepeatedWords();
 
 		String[] strArray = new String[] { "XXX", "BBB", "BBB", "BBB", "XXX", "AAA", "XXX", "AAA", "XXX", "PP", "QQ",
-				"CC", "CC","AAA","DDDD" };
+				"CC", "CC","AAA","DDDD"
+				};
 		tester.MostRepeatedWords(strArray);
 
 	}
