@@ -28,7 +28,8 @@ public class MergeTest {
 	public static Collection<int[][]> data() {
 		return Arrays.asList(new int[][][] {
 			
-			{{},{},{}}
+			{{},{},{}},
+			{{1,2,3,4},{},{1,2,3,4}},
 			});
 				
 	}
