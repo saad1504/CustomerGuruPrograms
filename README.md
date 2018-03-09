@@ -21,8 +21,7 @@ This repository contains the 4 questions given to me by CustomerGuru to be compl
 
 ## Question 3
 
-``` Write a program to merge two very large sorted
- array and print the final array. ```
+``` Write a program to merge two very large sorted array and print the final array. ```
 
 ## [Answer3](https://github.com/saad1504/CustomerGuruPrograms/tree/master/src/main/java/com/saad/algorithms/merging)
 
