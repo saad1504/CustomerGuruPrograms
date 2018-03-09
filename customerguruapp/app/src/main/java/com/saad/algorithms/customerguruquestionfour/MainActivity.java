@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private Spinner DropDownMenu;
@@ -29,12 +32,55 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         DropDownMenu.setAdapter(adapter);
         DropDownMenu.setOnItemSelectedListener(MainActivity.this);
+        Validate=(Button)findViewById(R.id.ValidateInput);
+        Validate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                validate();
+            }
+        });
+
     }
 
+    private void validate() {
+        if(NameField.getText().length() ==0 || PhoneField.getText().length()==0 || EmailField.getText().length()==0){
+            if(NameField.getText().length()==0){
+                NameField.setError("Please enter the name");
+            }
+            if(PhoneField.getText().length()==0){
+                PhoneField.setError("Please enter phone number");
+            }
+            if(EmailField.getText().length()==0) {
+                EmailField.setError("Please enter the email id");
+            }
+        }
+
+        String nameOfUser= NameField.getText().toString();
+        String emailOfUser= EmailField.getText().toString();
+        if(!(isAlpha(nameOfUser))) {
+            NameField.setError("Name can consist of only alphabets");
+        }
+        if(!(isEmailValid(emailOfUser))){
+         EmailField.setError("Email id is not of correct form");
+        }
+
+
+    }
+    public static boolean isEmailValid(String email) {
+        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
+
+
+    public boolean isAlpha(String name) {
+        return name.matches("[a-zA-Z]+");
+    }
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-        
+
     }
 
     @Override
