@@ -36,22 +36,33 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                validate();
+                if(validate()){
+                    Toast.makeText(MainActivity.this,"Input is valid",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(MainActivity.this,"Input is invalid,try again",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
     }
 
-    private void validate() {
+    private boolean validate() {
+        boolean validationFlag=true;
         if(NameField.getText().length() ==0 || PhoneField.getText().length()==0 || EmailField.getText().length()==0){
+
+            validationFlag=false;
             if(NameField.getText().length()==0){
                 NameField.setError("Please enter the name");
+
             }
             if(PhoneField.getText().length()==0){
                 PhoneField.setError("Please enter phone number");
+
             }
             if(EmailField.getText().length()==0) {
                 EmailField.setError("Please enter the email id");
+
             }
         }
 
@@ -59,10 +70,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         String emailOfUser= EmailField.getText().toString();
         if(!(isAlpha(nameOfUser))) {
             NameField.setError("Name can consist of only alphabets");
+            validationFlag=false;
         }
         if(!(isEmailValid(emailOfUser))){
-         EmailField.setError("Email id is not of correct form");
+            EmailField.setError("Email id is not of correct form");
+            validationFlag=false;
         }
+
+        return true;
 
 
     }
