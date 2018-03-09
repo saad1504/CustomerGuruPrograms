@@ -12,8 +12,7 @@ This repository contains the 4 questions given to me by CustomerGuru to be compl
 
 ## Question 2
 
-``` Write a program to print the top 5 most repeated words from a List? The output should be sorted in descending order. 
-Consider this list as an example input: {AAA,AAA,BBB,BBB,BBB,CC,CC XXX, XXX,PP,QQ,XXX,XXX} ```
+``` Write a program to print the top 5 most repeated words from a List? The output should be sorted in descending order ```
 
 ## [Answer2](https://github.com/saad1504/CustomerGuruPrograms/tree/master/src/main/java/com/saad/algorithms/mostrepeated)
 
@@ -23,10 +22,7 @@ Consider this list as an example input: {AAA,AAA,BBB,BBB,BBB,CC,CC XXX, XXX,PP,Q
 ## Question 3
 
 ``` Write a program to merge two very large sorted
- array and print the final array. 
-arrayA [100000] 
-arrayB [100000]
-[note : The time complexity should not be O(n^2)] ```
+ array and print the final array. ```
 
 ## [Answer3](https://github.com/saad1504/CustomerGuruPrograms/tree/master/src/main/java/com/saad/algorithms/merging)
 
