@@ -27,4 +27,10 @@ This repository contains the 4 questions given to me by CustomerGuru to be compl
 
 ## [Testing](https://github.com/saad1504/CustomerGuruPrograms/tree/master/src/test/java/com/saad/algorithms/merging)
 
+## Question 4
+
+``` Q4.Create a web form/android app which has the following fields a. name [text box] b. Phone [numeric field] c. email [email field] d. city [drop down containing: Select one, Delhi,Mumbai,kolkata,Chennai,Bangalore] ```
+
+## [Answer4](https://github.com/saad1504/CustomerGuruPrograms/tree/master/customerguruapp)
+
 
